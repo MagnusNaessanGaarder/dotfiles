@@ -1,0 +1,86 @@
+# Official repo packages these dotfiles depend on.
+# Install: grep -v '^#' pkglist.txt | sudo pacman -S --needed -
+
+# Hyprland session
+hyprland
+hyprlock
+hypridle
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+polkit-kde-agent
+sddm
+
+# Hyprland plugin (hyprgrass touch gestures), built by hyprpm
+hyprpm
+base-devel
+cmake
+meson
+cpio
+pkgconf
+git
+
+# Shell / bar / launcher / notifications
+quickshell
+waybar
+swaync
+wofi
+awww
+
+# Theming (theme_apply.sh, wallpaper scripts)
+matugen
+imagemagick
+jq
+nwg-look
+nwg-dock-hyprland
+papirus-icon-theme
+ttf-jetbrains-mono-nerd
+ttf-iosevka-nerd
+
+# Tray applets and background services
+network-manager-applet
+blueman
+gnome-keyring
+libsecret
+power-profiles-daemon
+zenity
+libnotify
+
+# Audio and media keys
+pipewire
+pipewire-pulse
+wireplumber
+pamixer
+playerctl
+
+# Screenshots, clipboard, brightness
+grim
+slurp
+wl-clipboard
+brightnessctl
+
+# ASUS laptop keys (profile switching, ROG control center)
+asusctl
+rog-control-center
+
+# Terminal and shell
+ghostty
+zsh
+starship
+eza
+fastfetch
+tmux
+stow
+
+# Integrity check (tools/check.sh) used before every push
+gitleaks
+shellcheck
+
+# Neovim and the tools its plugins call
+neovim
+ripgrep
+nodejs
+npm
+
+# Apps opened by keybinds
+thunar
+obsidian

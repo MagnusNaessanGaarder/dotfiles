@@ -1,0 +1,93 @@
+/* Maintained by Magnus Naessan Gaarder, based on work by Filip R. Spanne */
+/* @theme-colors-start */
+@define-color bg_base #1e1e2e;
+@define-color bg_crust #11111b;
+@define-color text_primary #cdd6f4;
+@define-color text_bright #b4befe;
+@define-color selection #45475a;
+@define-color border_color #11111b;
+/* @theme-colors-end */
+
+window {
+  margin: 0px;
+  border: 5px solid;
+  border-color: @border_color;
+  border-radius: 16px;
+  background-color: @bg_base;
+}
+
+#input {
+  padding: 4px;
+  margin: 4px;
+  padding-left: 20px;
+  border: 0px solid @selection;
+  color: @text_primary;
+  font-weight: bold;
+  background-color: @bg_base;
+  outline: none;
+  border-radius: 16px;
+  margin: 10px;
+  margin-bottom: 2px;
+}
+
+#input:focus {
+  border: 0px solid @selection;
+  margin-bottom: 0px;
+}
+
+#inner-box {
+  margin: 4px;
+  border: 10px solid @bg_base;
+  color: @text_primary;
+  font-weight: bold;
+  background-color: @bg_base;
+  border-radius: 16px;
+}
+
+#outer-box {
+  margin: 0px;
+  border: none;
+  border-radius: 16px;
+  background-color: @bg_base;
+}
+
+#scroll {
+  margin-top: 5px;
+  border: none;
+  border-radius: 16px;
+  margin-bottom: 5px;
+  /* background: rgb(255,255,255); */
+}
+
+#img {
+  padding-left: 3px;
+}
+#img:selected {
+  background-color: @selection;
+  border-radius: 16px;
+}
+
+#text {
+  margin: 12px;
+}
+
+#text:selected {
+  color: @text_primary;
+  border: none;
+  border-radius: 16px;
+  background-color: @selection;
+}
+
+#entry {
+  margin: 0px 0px;
+  border: none;
+  border-radius: 16px;
+  background-color: transparent;
+}
+
+#entry:selected {
+  margin: 0px 0px;
+  border: none;
+  border-radius: 16px;
+  background-color: @selection;
+}

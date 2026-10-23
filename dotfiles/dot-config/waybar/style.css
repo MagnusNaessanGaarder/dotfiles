@@ -1,0 +1,204 @@
+@import url("colors.css");
+
+* {
+  border: 0;
+  border-radius: 0;
+  font-family: "JetBrainsMono NF";
+  font-weight: bold;
+  font-size: 12px;
+  min-height: 36px;
+}
+
+window#waybar {
+  background: rgba(21, 18, 27, 0);
+  color: @text_primary;
+}
+
+tooltip {
+  background: @bg_base;
+  border-radius: 0px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: @bg_crust;
+}
+
+#custom-power_profile,
+#custom-weather,
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#temperature,
+#workspaces,
+#tray,
+#custom-wlogout,
+#custom-laptopwlogout,
+#custom-os_button,
+#taskbar,
+#mpris,
+#backlight {
+  background: @bg_base;
+  opacity: 1;
+  padding: 0px 20px;
+  margin: 11px 0px;
+  margin-top: 6px;
+}
+
+#workspaces {
+  background: @bg_base;
+  border-radius: 10px;
+  font-weight: normal;
+  font-style: normal;
+  margin-left: 0px;
+}
+
+#workspaces button {
+  color: @text_muted;
+  /*background-color: #212124;*/
+  border-radius: 8px;
+  padding: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 3px;
+  padding-right: 3px;
+  min-width: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#workspaces button.active {
+  color: @text_primary;
+  border-radius: 10px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+#workspaces button.urgent {
+  color: @bg_crust;
+  background: @green;
+  border-radius: 10px;
+}
+
+#workspaces button:hover {
+  color: @text_muted;
+  border-radius: 10px;
+}
+
+#temperature {
+  border-radius: 10px 10px 10px 10px;
+}
+
+#temperature.critical {
+  color: @maroon;
+}
+
+#backlight {
+  border-radius: 10px 0px 0px 10px;
+}
+
+#tray {
+  border-radius: 10px;
+  margin-right: 7px;
+}
+
+#custom-power_profile {
+  color: @green;
+}
+
+#window {
+  border-radius: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+#window.active {
+  border-radius: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
+  opacity: 100;
+}
+
+#clock {
+  color: @text_primary;
+  border-radius: 10px 10px 10px 10px;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+#network {
+  color: @yellow;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#bluetooth {
+  color: @accent;
+  border-radius: 0px 10px 10px 0px;
+  margin-right: 0px;
+}
+
+#pulseaudio {
+  color: @accent;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#pulseaudio.microphone {
+  color: @mauve;
+  border-radius: 0px 10px 10px 0px;
+  margin-right: 7px;
+}
+
+#battery {
+  color: @green;
+  border-radius: 0px;
+  margin-right: 0px;
+}
+
+#custom-weather {
+  border-radius: 10px 10px 10px 10px;
+  margin-right: 7px;
+}
+
+#custom-wlogout {
+  color: @red;
+  border-radius: 10px;
+  margin-right: 7px;
+}
+
+#custom-laptopwlogout {
+  color: @red;
+  border-radius: 0px 10px 10px 0px;
+  margin-right: 7px;
+}
+/*
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+*/
+
+#custom-os_button {
+  color: @red;
+  border-radius: 16px 0px 0px 16px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 3px;
+  padding-right: 10px;
+}
+#taskbar {
+  color: @red;
+  border-radius: 0px 16px 16px 0px;
+  padding-right: 1px;
+  padding-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+#taskbar hover {
+  border-radius: 0px 16px 16px 0px;
+}
+
+#mpris {
+  border-radius: 10px 10px 10px 10px;
+  margin-right: 6px;
+}

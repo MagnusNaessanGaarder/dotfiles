@@ -1,0 +1,10 @@
+# Author: Magnus Naessan Gaarder, based on work by Filip R. Spanne
+[Unit]
+Description=Weekly dotfiles backup (Monday 12:00, or at next login if missed)
+
+[Timer]
+OnCalendar=Mon 12:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

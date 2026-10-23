@@ -1,0 +1,9 @@
+# Author: Magnus Naessan Gaarder, based on work by Filip R. Spanne
+[Unit]
+Description=Commit and push dotfiles if the integrity check passes
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/Dotfiles/tools/backup.sh

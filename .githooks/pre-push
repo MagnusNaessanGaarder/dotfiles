@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Author: Magnus Naessan Gaarder
+#
+# Blocks `git push` when tools/check.sh fails, so broken configs or secrets never
+# reach GitHub. Enabled once per clone with: git config core.hooksPath .githooks
+
+exec "$(git rev-parse --show-toplevel)/tools/check.sh"

@@ -1,0 +1,25 @@
+# AUR packages these dotfiles depend on (pacman cannot install these).
+# Install: grep -v '^#' pkglist-aur.txt | paru -S --needed -
+
+# AUR helper (pacseek uses it to install packages)
+paru
+
+# Browser (SUPER+W)
+brave-bin
+
+# GTK theme and recoloured folder icons
+catppuccin-gtk-theme-git
+papirus-folders
+
+# Logout menu, keyboard pointer, colour picker, emoji picker (keybinds)
+wlogout
+wl-kbptr
+wl-color-picker
+bemoji
+
+# Spotify (SUPER+M) and its theming
+spotify
+spicetify-cli
+
+# Terminal package browser
+pacseek

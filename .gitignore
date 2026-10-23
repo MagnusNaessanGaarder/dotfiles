@@ -1,0 +1,31 @@
+latest.log
+dotfiles/dot-config/nvim/lazy-lock.json
+dotfiles/dot-config/hypr/local.conf
+dotfiles/dot-config/hypr/scripts/quickshell/guide/previews/
+
+.env
+
+# Generated theme files (written by theme_apply.sh at runtime)
+dotfiles/dot-config/hypr/scripts/quickshell/qs_colors.json
+dotfiles/dot-config/nvim/lua/magnus/theme_colors.lua
+dotfiles/dot-config/hypr/hyprlock-colors.conf
+dotfiles/dot-config/waybar/colors.css
+dotfiles/dot-config/swaync/colors.css
+dotfiles/dot-config/wlogout/colors.css
+dotfiles/dot-config/nwg-dock-hyprland/colors.css
+dotfiles/dot-config/ghostty/colors
+
+# Generated wallpaper splits (written by wallpaper_split.sh at runtime)
+dotfiles/dot-config/hypr/scripts/WallpaperSplitter/center.png
+dotfiles/dot-config/hypr/scripts/WallpaperSplitter/left.png
+dotfiles/dot-config/hypr/scripts/WallpaperSplitter/right.png
+
+# Secrets: every .env anywhere stays local; only the .env.example templates are committed
+.env.*
+!.env.example
+
+# Python bytecode and editor/temp leftovers
+__pycache__/
+*.pyc
+*.swp
+*.tmp
