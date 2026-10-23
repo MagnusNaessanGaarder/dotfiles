@@ -111,9 +111,22 @@ It runs in three places:
   ```
 
 - **Every Monday at 12:00**, via a systemd timer that runs `tools/backup.sh`.
-  If anything changed and the check passes, it commits and pushes, then sends
-  a desktop notification. If the check fails, nothing is committed. A missed
-  run (laptop off) happens at the next login.
+  A missed run (laptop off) happens at the next login.
+
+  The backup is GitHub's copy, which only moves after a successful push. Like an
+  HTTP ETag check, the script fetches it and compares content fingerprints (git
+  tree hashes, `.gitignore` applied), so touched-but-unchanged files and
+  regenerated theme files never cause a backup:
+
+  | Situation | What happens |
+  |---|---|
+  | Project equals the backup | Skipped, nothing committed or pushed |
+  | Project differs | Integrity check, commit listing the changed files, push, notification |
+  | GitHub unreachable | Nothing committed; retried every hour, 3 times, then next week |
+  | Check fails, push fails, or GitHub has newer commits | Any commit stays on the laptop; backups pause until you fix it and push yourself |
+
+  `tools/backup.sh --status` shows the last successful backup (time, commit,
+  files) and whether backups are paused.
 
   ```bash
   systemctl --user link ~/Dotfiles/systemd/dotfiles-backup.service

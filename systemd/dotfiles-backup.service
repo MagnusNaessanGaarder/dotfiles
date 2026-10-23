@@ -1,9 +1,15 @@
 # Author: Magnus Naessan Gaarder, based on work by Filip R. Spanne
 [Unit]
-Description=Commit and push dotfiles if the integrity check passes
-Wants=network-online.target
-After=network-online.target
+Description=Back up dotfiles to GitHub if they differ from the last backup
+# Up to 4 runs (the scheduled one + 3 retries) while GitHub is unreachable
+StartLimitIntervalSec=5h
+StartLimitBurst=5
 
 [Service]
 Type=oneshot
 ExecStart=%h/Dotfiles/tools/backup.sh
+# Exit 75 = GitHub unreachable, nothing committed: retry in an hour.
+# Exit 1 = needs a manual fix: never retried automatically.
+Restart=on-failure
+RestartSec=1h
+RestartPreventExitStatus=1
