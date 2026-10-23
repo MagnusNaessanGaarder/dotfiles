@@ -40,7 +40,6 @@
 		    "class<none>": "r", // Windows whose classes are "firefox"
 		    "class<librewolf>": "󰈹", // Windows whose classes are "firefox"
 		    "class<librewolf> title<.*github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
-		    "alacritty": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
 		    "ghostty": "", 
             "thunar": "󱧶", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
 		    "code": "󰨞",
@@ -222,7 +221,6 @@
 		    "class<none>": "r", // Windows whose classes are "firefox"
 		    "class<librewolf>": "󰈹", 
 		    "class<librewolf> title<.*github.*>": "", // Windows whose class is "librewolf" and title contains "github". Note that "class" always comes first.
-		    "alacritty": "",
 		    "ghostty": "", 
             "thunar": "󱧶", 
 		    "code": "󰨞",
@@ -399,7 +397,6 @@
 		    "class<none>": "r", // Windows whose classes are "firefox"
 		    "class<librewolf>": "󰈹", 
 		    "class<librewolf> title<.*github.*>": "", // Windows whose class is "librewolf" and title contains "github". Note that "class" always comes first.
-		    "alacritty": "",
 		    "ghostty": "", 
             "thunar": "󱧶", 
 		    "code": "󰨞",

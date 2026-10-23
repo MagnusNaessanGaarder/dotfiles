@@ -133,7 +133,7 @@ fi
 
 MATUGEN_CONFIG="$HOME/.config/matugen/config.toml"
 if [ ! -f "$MATUGEN_CONFIG" ]; then
-    echo "warning: ~/.config/matugen/config.toml missing — theme will not update. Run: cd ~/Services/arch-dotfiles/dotfiles && stow . --dotfiles -t \$HOME" >&2
+    echo "warning: ~/.config/matugen/config.toml missing — theme will not update. Run: cd ~/Dotfiles/dotfiles && stow . --dotfiles -t \$HOME" >&2
 else
     # matugen 4.1.0 iterates templates in non-deterministic hashmap order and
     # aborts the whole run if ANY template's input_path is missing — even

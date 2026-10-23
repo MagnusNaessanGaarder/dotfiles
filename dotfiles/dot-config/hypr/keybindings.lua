@@ -15,8 +15,6 @@ hl.bind(mainMod .. " + " .. "Q", hl.dsp.exec_cmd("ghostty"))
 
 --open the terminal
 
---bind = $mainMod, Q, exec, alacritty  #open the terminal
-
 hl.bind(mainMod .. " + " .. "X", hl.dsp.window.close())
 
 -- close the active window
