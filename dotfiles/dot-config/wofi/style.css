@@ -1,11 +1,11 @@
 /* Maintained by Magnus Naessan Gaarder, based on work by Filip R. Spanne */
 /* @theme-colors-start */
-@define-color bg_base #1e1e2e;
-@define-color bg_crust #11111b;
-@define-color text_primary #cdd6f4;
-@define-color text_bright #b4befe;
-@define-color selection #45475a;
-@define-color border_color #11111b;
+@define-color bg_base #150c08;
+@define-color bg_crust #1a110d;
+@define-color text_primary #f1dfd7;
+@define-color text_bright #9a4605;
+@define-color selection #322823;
+@define-color border_color #1a110d;
 /* @theme-colors-end */
 
 window {
