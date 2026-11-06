@@ -26,9 +26,10 @@ swaync
 wofi
 awww
 
-# Theming (theme_apply.sh, wallpaper scripts)
+# Theming (theme_apply.sh, wallpaper scripts, video wallpaper thumbnails)
 matugen
 imagemagick
+ffmpeg
 jq
 nwg-look
 nwg-dock-hyprland
@@ -39,6 +40,7 @@ ttf-iosevka-nerd
 # Tray applets and background services
 network-manager-applet
 blueman
+bluez-utils
 gnome-keyring
 libsecret
 power-profiles-daemon
@@ -52,11 +54,12 @@ wireplumber
 pamixer
 playerctl
 
-# Screenshots, clipboard, brightness
+# Screenshots, screen recording, clipboard, brightness
 grim
 slurp
 wl-clipboard
 brightnessctl
+kooha
 
 # ASUS laptop keys (profile switching, ROG control center)
 asusctl
@@ -70,6 +73,7 @@ eza
 fastfetch
 tmux
 stow
+bat
 
 # Integrity check (tools/check.sh) used before every push
 gitleaks

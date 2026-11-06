@@ -108,6 +108,7 @@ fastfetch
 alias ls='eza --icons --group-directories-first'
 alias cat='bat'
 alias grep='rg'
+alias t='tmux new -A -s main'
 bindkey '^H' backward-kill-word
 export PATH=$PATH:~/.spicetify
 

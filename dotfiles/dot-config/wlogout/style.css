@@ -11,7 +11,8 @@ window {
 
 button {
   border-radius: 30px;
-  margin: 172px 25px;
+  margin: 0;
+  min-width: 180px;
   border-color: @border_color;
   text-decoration-color: @text_primary;
   color: @text_primary;
@@ -19,8 +20,10 @@ button {
   border-style: solid;
   border-width: 1px;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 35%;
+  background-size: 45%;
+  background-position: center 40%;
+  font-size: 18px;
+  font-weight: bold;
   transition: 0.5s;
 }
 

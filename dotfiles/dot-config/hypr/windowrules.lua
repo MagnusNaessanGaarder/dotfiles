@@ -30,6 +30,14 @@ hl.window_rule({
 })
 
 hl.window_rule({
+	name = "pacseek-float-center",
+	match = { class = "com.magnus.pacseek" },
+	float = true,
+	center = true,
+	size = "monitor_w*0.7 monitor_h*0.7",
+})
+
+hl.window_rule({
 	name = "badlion-float-center",
 	match = { class = "BadlionClient" },
 	float = true,

@@ -79,9 +79,13 @@ hl.bind(mainMod .. " + " .. "W", hl.dsp.exec_cmd("brave"))
 
 --open browser
 
-hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd("obsidian --ozone-platform-hint=auto"))
+hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd("~/.local/bin/obsidian-vault --ozone-platform-hint=auto"))
 
 -- open obsidian
+
+hl.bind(mainMod .. " + " .. "I", hl.dsp.exec_cmd("ghostty --class=com.magnus.pacseek -e pacseek"))
+
+-- open pacseek (package browser, floats via windowrules.lua)
 
 hl.bind(mainMod .. " + " .. "M", hl.dsp.exec_cmd("spotify"))
 
