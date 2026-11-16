@@ -26,17 +26,61 @@ return {
       callback = function(ev)
         local opts = { buffer = ev.buf, silent = true }
 
-        vim.keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", vim.tbl_extend("force", opts, { desc = "Show LSP references" }))
-        vim.keymap.set("n", "gD", vim.lsp.buf.declaration, vim.tbl_extend("force", opts, { desc = "Go to declaration" }))
-        vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", vim.tbl_extend("force", opts, { desc = "Show LSP definitions" }))
-        vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", vim.tbl_extend("force", opts, { desc = "Show LSP implementations" }))
-        vim.keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", vim.tbl_extend("force", opts, { desc = "Show LSP type definitions" }))
-        vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, vim.tbl_extend("force", opts, { desc = "See available code actions" }))
+        vim.keymap.set(
+          "n",
+          "gR",
+          "<cmd>Telescope lsp_references<CR>",
+          vim.tbl_extend("force", opts, { desc = "Show LSP references" })
+        )
+        vim.keymap.set(
+          "n",
+          "gD",
+          vim.lsp.buf.declaration,
+          vim.tbl_extend("force", opts, { desc = "Go to declaration" })
+        )
+        vim.keymap.set(
+          "n",
+          "gd",
+          "<cmd>Telescope lsp_definitions<CR>",
+          vim.tbl_extend("force", opts, { desc = "Show LSP definitions" })
+        )
+        vim.keymap.set(
+          "n",
+          "gi",
+          "<cmd>Telescope lsp_implementations<CR>",
+          vim.tbl_extend("force", opts, { desc = "Show LSP implementations" })
+        )
+        vim.keymap.set(
+          "n",
+          "gt",
+          "<cmd>Telescope lsp_type_definitions<CR>",
+          vim.tbl_extend("force", opts, { desc = "Show LSP type definitions" })
+        )
+        vim.keymap.set(
+          { "n", "v" },
+          "<leader>ca",
+          vim.lsp.buf.code_action,
+          vim.tbl_extend("force", opts, { desc = "See available code actions" })
+        )
         vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, vim.tbl_extend("force", opts, { desc = "Smart rename" }))
-        vim.keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", vim.tbl_extend("force", opts, { desc = "Show buffer diagnostics" }))
-        vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, vim.tbl_extend("force", opts, { desc = "Show line diagnostics" }))
-        vim.keymap.set("n", "[d", function() vim.diagnostic.jump({ count = -1, float = true }) end, vim.tbl_extend("force", opts, { desc = "Go to previous diagnostic" }))
-        vim.keymap.set("n", "]d", function() vim.diagnostic.jump({ count = 1, float = true }) end, vim.tbl_extend("force", opts, { desc = "Go to next diagnostic" }))
+        vim.keymap.set(
+          "n",
+          "<leader>D",
+          "<cmd>Telescope diagnostics bufnr=0<CR>",
+          vim.tbl_extend("force", opts, { desc = "Show buffer diagnostics" })
+        )
+        vim.keymap.set(
+          "n",
+          "<leader>d",
+          vim.diagnostic.open_float,
+          vim.tbl_extend("force", opts, { desc = "Show line diagnostics" })
+        )
+        vim.keymap.set("n", "[d", function()
+          vim.diagnostic.jump({ count = -1, float = true })
+        end, vim.tbl_extend("force", opts, { desc = "Go to previous diagnostic" }))
+        vim.keymap.set("n", "]d", function()
+          vim.diagnostic.jump({ count = 1, float = true })
+        end, vim.tbl_extend("force", opts, { desc = "Go to next diagnostic" }))
         vim.keymap.set("n", "K", vim.lsp.buf.hover, vim.tbl_extend("force", opts, { desc = "Show documentation" }))
 
         -- Inlay hints (parameter names, inferred types) for any server that
@@ -85,7 +129,9 @@ return {
           for _, client in ipairs(vim.lsp.get_clients({ bufnr = bufnr })) do
             client:stop()
           end
-          vim.defer_fn(function() vim.cmd("edit") end, 250)
+          vim.defer_fn(function()
+            vim.cmd("edit")
+          end, 250)
         end, vim.tbl_extend("force", opts, { desc = "Restart LSP" }))
       end,
     })
@@ -131,6 +177,9 @@ return {
         "--clang-tidy",
         "--header-insertion=iwyu",
         "--completion-style=detailed",
+      },
+      init_options = {
+        fallbackFlags = { "-std=c++23", "-Wall", "-Wextra" },
       },
     }
 
